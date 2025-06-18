@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mercados - Mercadex</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        .quiz {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #ffffff;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .image-gallery img {
+            max-width: 200px;
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Mercadex</h1>
+    <h2>Explorando los Mercados</h2>
+</header>
+
+<div class="content">
+    <h3>Definición de Mercados</h3>
+    <p>Los mercados son espacios físicos o virtuales donde se lleva a cabo la compra y venta de bienes y servicios. Estos pueden ser determinados por su ubicación, estructura y naturaleza de los productos que comercializan.</p>
+
+    <h3>Tipos de Mercados</h3>
+    <ul>
+        <li><strong>Mercado de Bienes:</strong> Incluye productos tangibles como alimentos, ropa, etc.</li>
+        <li><strong>Mercado de Servicios:</strong> Relacionado a servicios como educación, salud, turismo, etc.</li>
+        <li><strong>Mercado Financiero:</strong> Enfocado en la compra y venta de activos financieros como acciones, bonos, etc.</li>
+        <li><strong>Mercado Laboral:</strong> Espacio donde se ofrecen y demandan trabajos.</li>
+    </ul>
+
+    <!-- Sección de imágenes de posición y tamaño demostrativo -->
+    <div class="image-gallery" aria-label="Galería de imágenes demostrativas de tipos de mercados">
+        <img 
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/28795ca5-3adf-493a-912e-304710bbf667.png" 
+            alt="Imagen representando Mercado de Bienes, contenedor de productos tangibles" 
+            loading="lazy"
+            width="200" height="150"
+        />
+        <img 
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3f761262-899e-4a59-a6d1-b384b0618a32.png" 
+            alt="Imagen representando Mercado de Servicios, ilustración de educación y salud" 
+            loading="lazy"
+            width="200" height="150"
+        />
+        <img 
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e1ee16f1-5c50-4a19-b9dd-1c953c323aa0.png" 
+            alt="Imagen representando Mercado Financiero, gráficos y activos financieros" 
+            loading="lazy"
+            width="200" height="150"
+        />
+        <img 
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/88add6e2-9131-423c-9743-a068fbe3c3ea.png" 
+            alt="Imagen representando Mercado Laboral, personas trabajando y networking" 
+            loading="lazy"
+            width="200" height="150"
+        />
+    </div>
+</div>
+
+<div class="quiz">
+    <h3>Cuestionario sobre Mercados</h3>
+    <form id="quizForm">
+        <p>1. ¿Qué es un mercado?</p>
+        <input type="text" name="question1" required />
+
+        <p>2. ¿Qué tipo de mercado se relaciona con servicios?</p>
+        <input type="text" name="question2" required />
+
+        <p>3. ¿Cómo se llama el mercado relacionado con la compra y venta de activos financieros?</p>
+        <input type="text" name="question3" required />
+        
+        <br />
+        <button type="button" onclick="submitQuiz()">Enviar Respuestas</button>
+    </form>
+
+    <p id="result"></p>
+</div>
+
+<footer>
+    <p>Proyecto de Economía - 2025</p>
+</footer>
+
+<script>
+    function submitQuiz() {
+        const answers = {
+            question1: "espacio de compra y venta",
+            question2: "mercado de servicios",
+            question3: "mercado financiero"
+        };
+
+        let score = 0;
+        let totalQuestions = 3;
+        const form = document.forms['quizForm'];
+
+        for (let question in answers) {
+            const userAnswer = form[question].value.toLowerCase();
+            if (userAnswer.includes(answers[question])) {
+                score++;
+            }
+        }
+
+        const result = `Has respondido ${score} preguntas correctas y ${totalQuestions - score} incorrectas.`;
+        document.getElementById('result').innerHTML = result;
+    }
+</script>
+
+</body>
+</html>
+
