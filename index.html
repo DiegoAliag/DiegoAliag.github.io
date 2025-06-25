@@ -6,44 +6,88 @@
     <title>Mercados - Mercadex</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f2f6f9;
+            color: #2c3e50;
+            margin: 0;
         }
         header {
-            background-color: #4CAF50;
+            background: linear-gradient(90deg, #00b894, #55efc4);
             color: white;
-            padding: 10px 0;
+            padding: 30px 0;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .content {
-            padding: 20px;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+            line-height: 1.6;
         }
-        .quiz {
-            margin: 20px 0;
-            padding: 10px;
-            border: 1px solid #ccc;
-            background-color: #ffffff;
+        h3 {
+            color: #0984e3;
+            border-bottom: 2px solid #dfe6e9;
+            padding-bottom: 5px;
+            margin-top: 40px;
         }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #4CAF50;
-            color: white;
+        p, ul {
+            text-align: justify;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 8px;
         }
         .image-gallery {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-            gap: 16px;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 30px;
         }
         .image-gallery img {
-            max-width: 200px;
             width: 100%;
-            border-radius: 8px;
+            height: 300px;
             object-fit: cover;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+        }
+        .quiz {
+            background: #ffffff;
+            border: 1px solid #ccc;
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 800px;
+            margin: 40px auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #00cec9;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #00b894;
+        }
+        footer {
+            background-color: #00b894;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -56,61 +100,81 @@
 
 <div class="content">
     <h3>Definición de Mercados</h3>
-    <p>Los mercados son espacios físicos o virtuales donde se lleva a cabo la compra y venta de bienes y servicios. Estos pueden ser determinados por su ubicación, estructura y naturaleza de los productos que comercializan.</p>
+    <p>Los mercados son el ámbito donde se encuentran demandantes interesados en adquirir lo que los ofertantes desean vender. Además, es el área donde los compradores y vendedores se relacionan y negocian de forma directa o indirecta.</p>
 
-    <h3>Tipos de Mercados</h3>
+    <h3>Elementos del mercado</h3>
     <ul>
-        <li><strong>Mercado de Bienes:</strong> Incluye productos tangibles como alimentos, ropa, etc.</li>
-        <li><strong>Mercado de Servicios:</strong> Relacionado a servicios como educación, salud, turismo, etc.</li>
-        <li><strong>Mercado Financiero:</strong> Enfocado en la compra y venta de activos financieros como acciones, bonos, etc.</li>
-        <li><strong>Mercado Laboral:</strong> Espacio donde se ofrecen y demandan trabajos.</li>
+        <li><strong>Mercancía:</strong> Bienes y servicios producidos.</li>
+        <li><strong>Demanda:</strong> El deseo y la capacidad de comprar de los consumidores.</li>
+        <li><strong>Oferta:</strong> El deseo y la capacidad de vender de los empresarios.</li>
+        <li><strong>Precio:</strong> Valor monetario de los bienes y servicios.</li>
     </ul>
 
-    <!-- Sección de imágenes de posición y tamaño demostrativo -->
-    <div class="image-gallery" aria-label="Galería de imágenes demostrativas de tipos de mercados">
-        <img 
-            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/28795ca5-3adf-493a-912e-304710bbf667.png" 
-            alt="Imagen representando Mercado de Bienes, contenedor de productos tangibles" 
-            loading="lazy"
-            width="200" height="150"
-        />
-        <img 
-            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3f761262-899e-4a59-a6d1-b384b0618a32.png" 
-            alt="Imagen representando Mercado de Servicios, ilustración de educación y salud" 
-            loading="lazy"
-            width="200" height="150"
-        />
-        <img 
-            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e1ee16f1-5c50-4a19-b9dd-1c953c323aa0.png" 
-            alt="Imagen representando Mercado Financiero, gráficos y activos financieros" 
-            loading="lazy"
-            width="200" height="150"
-        />
-        <img 
-            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/88add6e2-9131-423c-9743-a068fbe3c3ea.png" 
-            alt="Imagen representando Mercado Laboral, personas trabajando y networking" 
-            loading="lazy"
-            width="200" height="150"
-        />
-    </div>
+    <h3>Clases de mercado</h3>
+    <ul>
+        <li><strong>Según el volumen transado:</strong> Mayorista y minorista.</li> 
+        <li><strong>Según la duración:</strong> Permanentes y temporales.</li>
+        <li><strong>Según el aspecto legal:</strong> Formal, informal e ilegal.</li>
+        <li><strong>Según el espacio:</strong> Interno y externo.</li>
+        <li><strong>Mercado Negro:</strong> Transacciones clandestinas.</li>
+        <li><strong>De capitales:</strong> Donde participan inversionistas y ahorristas.</li>
+        <li><strong>De divisas:</strong> Compra y venta de monedas extranjeras.</li>
+    </ul>
+
+    <h3>Mercado Perfecto e Imperfecto</h3>
+    <p><strong>Mercado Perfecto:</strong> Es aquel donde existen muchos compradores y vendedores, productos homogéneos, libre entrada y salida, y completa información.</p>
+    <p><strong>Mercado Imperfecto:</strong> Es aquel donde alguna de las condiciones del mercado perfecto no se cumple. Sus tipos principales son:</p>
+    <ul>
+        <li><strong>Monopolio:</strong> Un solo vendedor controla el mercado.</li>
+        <li><strong>Oligopolio:</strong> Pocos vendedores dominan el mercado.</li>
+        <li><strong>Monopsonio:</strong> Un solo comprador concentra la demanda.</li>
+        <li><strong>Oligopsonio:</strong> Pocos compradores tienen el control sobre la demanda.</li>
+        <li><strong>Competencia Monopolística:</strong> Muchos vendedores con productos diferenciados.</li>
+    </ul>
 </div>
 
 <div class="quiz">
     <h3>Cuestionario sobre Mercados</h3>
     <form id="quizForm">
-        <p>1. ¿Qué es un mercado?</p>
-        <input type="text" name="question1" required />
+        <p>1. ¿Cuál es la función principal de un mercado?</p>
+        <input type="text" name="q1" required />
 
-        <p>2. ¿Qué tipo de mercado se relaciona con servicios?</p>
-        <input type="text" name="question2" required />
+        <p>2. ¿Qué elemento del mercado refleja lo que el consumidor desea comprar?</p>
+        <input type="text" name="q2" required />
 
-        <p>3. ¿Cómo se llama el mercado relacionado con la compra y venta de activos financieros?</p>
-        <input type="text" name="question3" required />
-        
-        <br />
+        <p>3. ¿Cómo se llama la relación entre oferta y demanda?</p>
+        <input type="text" name="q3" required />
+
+        <p>4. ¿Qué clase de mercado es internacional?</p>
+        <input type="text" name="q4" required />
+
+        <p>5. ¿Qué tipo de mercado tiene productos ilegales?</p>
+        <input type="text" name="q5" required />
+
+        <p>6. ¿Qué mercado involucra monedas extranjeras?</p>
+        <input type="text" name="q6" required />
+
+        <p>7. ¿Qué tipo de mercado existe cuando hay un solo vendedor?</p>
+        <input type="text" name="q7" required />
+
+        <p>8. ¿Qué tipo de competencia tiene productos similares pero no iguales?</p>
+        <input type="text" name="q8" required />
+
+        <p>9. ¿Qué tipo de mercado permite acceso libre y muchos compradores?</p>
+        <input type="text" name="q9" required />
+
+        <h4>Casos para identificar el tipo de mercado:</h4>
+        <p>10. Una empresa controla el 100% de la electricidad en un país.</p>
+        <input type="text" name="q10" required />
+
+        <p>11. Muchas marcas de champú se venden con diferentes envases y publicidad.</p>
+        <input type="text" name="q11" required />
+
+        <p>12. Dos aerolíneas dominan las rutas nacionales de un país.</p>
+        <input type="text" name="q12" required />
+
         <button type="button" onclick="submitQuiz()">Enviar Respuestas</button>
     </form>
-
     <p id="result"></p>
 </div>
 
@@ -120,28 +184,31 @@
 
 <script>
     function submitQuiz() {
-        const answers = {
-            question1: "espacio de compra y venta",
-            question2: "mercado de servicios",
-            question3: "mercado financiero"
-        };
-
         let score = 0;
-        let totalQuestions = 3;
+        const answers = {
+            q1: "intercambio",
+            q2: "demanda",
+            q3: "precio",
+            q4: "externo",
+            q5: "mercado negro",
+            q6: "de divisas",
+            q7: "monopolio",
+            q8: "competencia monopolística",
+            q9: "mercado perfecto",
+            q10: "monopolio",
+            q11: "competencia monopolística",
+            q12: "oligopolio"
+        };
         const form = document.forms['quizForm'];
-
-        for (let question in answers) {
-            const userAnswer = form[question].value.toLowerCase();
-            if (userAnswer.includes(answers[question])) {
+        for (let q in answers) {
+            let user = form[q].value.toLowerCase();
+            if (user.includes(answers[q])) {
                 score++;
             }
         }
-
-        const result = `Has respondido ${score} preguntas correctas y ${totalQuestions - score} incorrectas.`;
-        document.getElementById('result').innerHTML = result;
+        document.getElementById('result').innerText = `Tuviste ${score} respuestas correctas de 12.`;
     }
 </script>
 
 </body>
 </html>
-
